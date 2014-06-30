@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.wee.oa.domain">
+
+	<class name="Role" table="wee_role">
+		<id name="id">
+            <generator class="native"/>
+		</id>
+		<property name="name" column="name"></property>
+		<property name="description" column="description"></property>
+		
+		<!--  与user多对多-->
+		<set name="users" table="wee_user_role">
+			<key column="roleId"></key>
+			<many-to-many class="User" column="userId"></many-to-many>
+			</set>
+				<!--  与privilege多对多-->
+		<set name="privileges" table="wee_role_privilege" lazy="false">
+			<key column="roleId"></key>
+			<many-to-many class="Privilege" column="privilegeId"></many-to-many>
+		</set>
+		
+		
+		
+	</class>
+	
+</hibernate-mapping>
