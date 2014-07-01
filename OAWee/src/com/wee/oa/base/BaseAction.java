@@ -5,10 +5,10 @@ import java.lang.reflect.ParameterizedType;
 import javax.annotation.Resource;
 
 import com.wee.oa.service.PrivilegeService;
-
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import com.wee.oa.service.DepartmentService;
+import com.wee.oa.service.ForumService;
 import com.wee.oa.service.RoleService;
 import com.wee.oa.service.UserService;
 
@@ -30,6 +30,9 @@ public class BaseAction<T> extends ActionSupport implements
 	
 	@Resource
 	protected PrivilegeService privilegeService;
+	
+	@Resource
+	protected ForumService forumService;
 	
 	protected T model ;
 	

@@ -6,3 +6,5 @@
 /Role.hbm.xml
 /User.class
 /User.hbm.xml
+/Forum.class
+/Forum.hbm.xml
