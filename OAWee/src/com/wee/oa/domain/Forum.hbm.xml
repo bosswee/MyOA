@@ -15,8 +15,24 @@
 	
 		<property name="description" column="description"></property>
 		
-		<property name="position" column="postion"></property>
+		<property name="position" column="position"></property>
+		
+		<property name="topicCount" column="topicCount"></property>
+		
+		<property name="articleCount" column="articleCount"></property>
+		
+		<!-- 和lasttopic的一对一关系 -->
+		<!-- 用多对一，加唯一性约束 ?? 基于外键的一对一关系，本方有外键-->
+		
+		<many-to-one name="lastTopic" class="Topic" column="lastTopicId" unique="true"></many-to-one>
+		
+		
+		<!-- 和topics的一对多关联 -->
 																											
+		<set name="topics">
+			<key column="forumId"></key>
+			<one-to-many class="Topic"/>
+		</set>
 		
 		
 	</class>

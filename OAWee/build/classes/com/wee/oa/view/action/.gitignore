@@ -4,3 +4,6 @@
 /RoleAction.class
 /UserAction.class
 /ForumManageAction.class
+/ForumAction.class
+/TopicAction.class
+/ReplyAction.class

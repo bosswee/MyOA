@@ -3,3 +3,5 @@
 /RoleService.class
 /UserService.class
 /ForumService.class
+/TopicService.class
+/ReplyService.class

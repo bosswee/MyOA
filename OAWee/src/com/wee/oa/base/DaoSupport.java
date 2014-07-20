@@ -2,6 +2,9 @@ package com.wee.oa.base;
 
 import java.util.List;
 
+import com.wee.oa.domain.PageBean;
+import com.wee.oa.util.QueryHelper;
+
 public interface DaoSupport<T> {
 	/**
 	 * 保存实体
@@ -36,5 +39,8 @@ public interface DaoSupport<T> {
 	 */
 	
 	List<T> findAll();
+	
+	PageBean getPageBean(int currentPage, String hql, Object[] args);
+	PageBean getPageBean(int currentPage, QueryHelper queryHelper);
 
 }

@@ -15,10 +15,11 @@ public class TestService {
 		private SessionFactory sessionFactory;
 		@Transactional
 		public void addUsers() {
+			
+			
 			sessionFactory.getCurrentSession().save(new User());
-			//int a = 1 / 0; // 这行会抛异常
-			sessionFactory.getCurrentSession().save(new User());
-		}
+		
 	
 	
+}
 }

@@ -26,6 +26,9 @@
 	<mapping resource="com/wee/oa/domain/Department.hbm.xml" />
     <mapping resource="com/wee/oa/domain/Privilege.hbm.xml" />
     <mapping resource="com/wee/oa/domain/Forum.hbm.xml" />
+    <mapping resource="com/wee/oa/domain/Topic.hbm.xml" />
+    <mapping resource="com/wee/oa/domain/Reply.hbm.xml" />
+  
 
 </session-factory>
 </hibernate-configuration>

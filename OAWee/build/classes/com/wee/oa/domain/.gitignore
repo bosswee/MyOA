@@ -8,3 +8,10 @@
 /User.hbm.xml
 /Forum.class
 /Forum.hbm.xml
+/Topic.class
+/Article.class
+/Reply.class
+/Topic.hbm.xml
+/Reply.hbm.xml
+/PageBean.class
+/QueryHelper.class

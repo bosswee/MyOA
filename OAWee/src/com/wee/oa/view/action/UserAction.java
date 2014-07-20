@@ -7,6 +7,7 @@ import java.util.List;
 
 
 
+
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
@@ -14,9 +15,11 @@ import org.springframework.stereotype.Controller;
 import com.opensymphony.xwork2.ActionContext;
 import com.wee.oa.base.BaseAction;
 import com.wee.oa.domain.Department;
+import com.wee.oa.domain.Reply;
 import com.wee.oa.domain.Role;
 import com.wee.oa.domain.User;
 import com.wee.oa.util.DepartmentUtils;
+import com.wee.oa.util.QueryHelper;
 
 
 
@@ -33,6 +36,12 @@ public class UserAction extends BaseAction<User> {
 	public String list() throws Exception {
 		List<User> userList = userService.findAll();
 		ActionContext.getContext().put("userList", userList);
+		
+		// 准备分页的数据 v4 （最终版）-- 使用QueryHelper
+		new QueryHelper(User.class, "u")
+				.preparePageBean(userService, currentPage);
+
+		
 		return "list";
 	}
 

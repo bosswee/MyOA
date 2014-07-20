@@ -3,3 +3,5 @@
 /RoleServiceImpl.class
 /UserServiceImpl.class
 /ForumServiceImpl.class
+/TopicServiceImpl.class
+/ReplyServiceImpl.class

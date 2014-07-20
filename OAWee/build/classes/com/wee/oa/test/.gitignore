@@ -2,3 +2,6 @@
 /TestLog.class
 /TestService.class
 /TestSpring.class
+/MemoryLeak.class
+/ConsumerContainer.class
+/MemoryConsumer.class

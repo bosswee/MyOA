@@ -39,7 +39,7 @@
 			<!--显示数据列表-->
 			<tbody id="TableData" class="dataContainer" datakey="userList">
 
-			<s:iterator value="userList"> 
+			<s:iterator value="recordList"> 
 				<tr class="TableDetail1 template">
 					<td>${loginName}&nbsp;</td>
 					<td>${name}&nbsp;</td>
@@ -59,9 +59,10 @@
 				</s:iterator>
 			    </tbody>
     </table>
-    	
+    	<s:form id="pageForm" action="user_list?id=%{id}"></s:form>
 
 		<!-- 其他功能超链接 -->
+		<%@ include file="/WEB-INF/jsp/public/pageView.jspf"%>
 		<div id="TableTail">
 			<div id="TableTail_inside">
 				<s:a action="user_addUI"><img

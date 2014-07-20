@@ -4,12 +4,18 @@ import java.lang.reflect.ParameterizedType;
 
 import javax.annotation.Resource;
 
-import com.wee.oa.service.PrivilegeService;
+import org.apache.struts2.ServletActionContext;
+
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
+import com.wee.oa.domain.User;
 import com.wee.oa.service.DepartmentService;
 import com.wee.oa.service.ForumService;
+import com.wee.oa.service.PrivilegeService;
+import com.wee.oa.service.ReplyService;
 import com.wee.oa.service.RoleService;
+import com.wee.oa.service.TopicService;
 import com.wee.oa.service.UserService;
 
 
@@ -33,6 +39,12 @@ public class BaseAction<T> extends ActionSupport implements
 	
 	@Resource
 	protected ForumService forumService;
+	
+	@Resource
+	protected TopicService topicService;
+	
+	@Resource
+	protected ReplyService replyService;
 	
 	protected T model ;
 	
@@ -58,4 +70,25 @@ public class BaseAction<T> extends ActionSupport implements
 
 		return model;
 	}
+	
+
+	public String getRequestIP() {
+		
+		return ServletActionContext.getRequest().getRemoteAddr();
+	}
+
+	public User getCurrentUser() {
+	
+		return (User)ActionContext.getContext().getSession().get("user");
+	}
+	
+	protected int currentPage=1;
+	public int getCurrentPage() {
+		return currentPage;
+	}
+
+	public void setCurrentPage(int currentPage) {
+		this.currentPage = currentPage;
+	}
+
 }

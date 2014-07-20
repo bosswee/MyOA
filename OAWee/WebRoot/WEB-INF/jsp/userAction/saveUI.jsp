@@ -55,7 +55,7 @@
 						</tr>
 						<tr>
 							<td>登录名</td>
-							<td><s:textfield name="loginName"  cssClass="InputStyle" /> * （登录名要唯一）</td>
+							<td><s:textfield name="loginName"  cssClass="InputStyle required" /> * （登录名要唯一）</td>
 						</tr>
 						<tr>
 							<td>姓名</td>

@@ -114,6 +114,34 @@
 
 
 		</action>
+		
+			<!-- 板块 -->
+		<action name="forum_*" class="com.wee.oa.view.action.ForumAction"
+			method="{1}">
+			<result name="list">/WEB-INF/jsp/forumAction/list.jsp</result>
+			<result name="show">/WEB-INF/jsp/forumAction/show.jsp</result>
+			
+
+
+		</action>
+		
+			<!-- 主题 -->
+		<action name="topic_*" class="com.wee.oa.view.action.TopicAction"
+			method="{1}">
+			<result name="show">/WEB-INF/jsp/topicAction/show.jsp</result>
+			<result name="addUI">/WEB-INF/jsp/topicAction/addUI.jsp</result>		
+    		<result name="toShow" type="redirectAction">forum_show?id=%{forumId}</result>
+
+		</action>
+		
+			<!-- 回复 -->
+		<action name="reply_*" class="com.wee.oa.view.action.ReplyAction"
+			method="{1}">
+			<result name="addUI">/WEB-INF/jsp/replyAction/addUI.jsp</result>
+			<result name="toTopicShow" type="redirectAction">topic_show?id=%{topicId}</result>
+
+
+		</action>
 	</package>
 </struts>
 			
