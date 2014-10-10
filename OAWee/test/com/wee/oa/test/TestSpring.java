@@ -1,6 +1,7 @@
 package com.wee.oa.test;
 
 import org.hibernate.SessionFactory;
+import org.jbpm.api.ProcessEngine;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -23,6 +24,12 @@ public class TestSpring {
 	public void testTransaction() {
 		TestService  service = (TestService) ac.getBean("testService");
 		service.addUsers();
+	}
+	
+	@Test//测试工作流引擎
+	public void testProcessEngine() throws Exception{
+		ProcessEngine processEngine = (ProcessEngine)ac.getBean("processEngine");
+		System.out.println(processEngine);
 	}
 	
 	// 测试Action对象的管理

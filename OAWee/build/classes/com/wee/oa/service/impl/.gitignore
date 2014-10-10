@@ -5,3 +5,5 @@
 /ForumServiceImpl.class
 /TopicServiceImpl.class
 /ReplyServiceImpl.class
+/ProcessDefinitionServiceImpl.class
+/TemplateServiceImpl.class

@@ -6,12 +6,12 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
 import com.opensymphony.xwork2.ActionContext;
-import com.wee.oa.base.BaseAction;
+import com.wee.oa.base.ModelDrivenAction;
 import com.wee.oa.domain.Forum;
 
 @Controller
 @Scope("prototype")
-public class ForumManageAction extends BaseAction<Forum> {
+public class ForumManageAction extends ModelDrivenAction<Forum> {
 
 	public String list() throws Exception {
 		List<Forum> forumList = forumService.findAll();
