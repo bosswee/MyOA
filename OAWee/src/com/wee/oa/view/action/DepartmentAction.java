@@ -10,7 +10,7 @@ import org.springframework.stereotype.Controller;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
-import com.wee.oa.base.BaseAction;
+import com.wee.oa.base.ModelDrivenAction;
 import com.wee.oa.domain.Department;
 import com.wee.oa.service.DepartmentService;
 import com.wee.oa.util.DepartmentUtils;
@@ -18,7 +18,7 @@ import com.wee.oa.util.DepartmentUtils;
 @SuppressWarnings("serial")
 @Controller
 @Scope("prototype")
-public class DepartmentAction extends BaseAction<Department>  {
+public class DepartmentAction extends ModelDrivenAction<Department>  {
 
 	
 

@@ -7,3 +7,6 @@
 /ForumAction.class
 /TopicAction.class
 /ReplyAction.class
+/ProcessDefinitionAction.class
+/TempleteAction.class
+/TemplateAction.class

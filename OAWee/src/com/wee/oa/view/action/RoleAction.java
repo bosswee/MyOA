@@ -10,14 +10,14 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
 import com.opensymphony.xwork2.ActionContext;
-import com.wee.oa.base.BaseAction;
+import com.wee.oa.base.ModelDrivenAction;
 import com.wee.oa.domain.Privilege;
 import com.wee.oa.domain.Role;
 
 @SuppressWarnings("serial")
 @Controller
 @Scope("prototype")
-public class RoleAction extends BaseAction<Role>{
+public class RoleAction extends ModelDrivenAction<Role>{
 	private Long[] privilegeIds;
 
 	

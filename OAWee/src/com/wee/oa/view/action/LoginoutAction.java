@@ -4,13 +4,13 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
 import com.opensymphony.xwork2.ActionContext;
-import com.wee.oa.base.BaseAction;
+import com.wee.oa.base.ModelDrivenAction;
 import com.wee.oa.domain.User;
 
 @SuppressWarnings("serial")
 @Controller
 @Scope("prototype")
-public class LoginoutAction extends BaseAction<User> {
+public class LoginoutAction extends ModelDrivenAction<User> {
 
 	public String loginUI(){
 		

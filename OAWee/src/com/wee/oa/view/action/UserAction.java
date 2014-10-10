@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
 import com.opensymphony.xwork2.ActionContext;
-import com.wee.oa.base.BaseAction;
+import com.wee.oa.base.ModelDrivenAction;
 import com.wee.oa.domain.Department;
 import com.wee.oa.domain.Reply;
 import com.wee.oa.domain.Role;
@@ -27,7 +27,7 @@ import com.wee.oa.util.QueryHelper;
 @SuppressWarnings("serial")
 @Controller
 @Scope("prototype")
-public class UserAction extends BaseAction<User> {	
+public class UserAction extends ModelDrivenAction<User> {	
 
 	private Long departmentId;
 	private Long[] roleIds;

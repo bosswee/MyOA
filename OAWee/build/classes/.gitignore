@@ -4,3 +4,5 @@
 /log4j.properties
 /struts.xml
 /default.properties
+/jbpm.cfg.xml
+/jbpm.hibernate.cfg.xml
